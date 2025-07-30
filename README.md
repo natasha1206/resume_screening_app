@@ -61,22 +61,26 @@ resume_screening_app/
 ```bash
 git clone https://github.com/yourusername/resume_screening_app.git
 cd resume_screening_app
+```
 
 2. **Create a virtual environment**
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```
 
 3. **Install dependencies**
 
 ```bash
 pip install -r requirements.txt
+```
 
 4. **Run the app**
 
 ```bash
 python app.py
+```
 
 5. **Access the app**
 

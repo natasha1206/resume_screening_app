@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>AI-Powered Resume Screening</h1>
+        <p>Instantly analyze and rank resumes using artificial intelligence.</p>
+        <a href="{{ url_for('upload') }}" class="hero-button">Upload Resumes</a>
+      </div>
+      <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/undraw_online-resume_z4sp.png') }}" alt="Hero illustration">
+      </div>
+    </div>
+  </section>
+  
+
+<div class="container">
+    <div class="features">
+        <div class="feature-box">
+            <h3>📄 Upload Resumes</h3>
+            <p>Upload multiple PDF resumes at once. No formatting requirements — we parse them automatically.</p>
+        </div>
+        <div class="feature-box">
+            <h3>🧠 Smart Matching</h3>
+            <p>Our AI uses NLP and machine learning to compare resumes with your job description.</p>
+        </div>
+        <div class="feature-box">
+            <h3>📊 Instant Results</h3>
+            <p>Get ranked results with similarity scores and insights — no manual scanning needed.</p>
+        </div>
+    </div>
+</div>
+
+<div class="testimonials">
+    <div class="testimonials-container">
+        <h2>What People Are Saying</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                This tool saved us hours of resume review time and helped us find the right candidate in minutes.
+                <div class="author">Sarah M.</div>
+                <div class="role">HR Manager, TechNova</div>
+            </div>
+            <div class="testimonial">
+                I was skeptical at first, but the results were incredibly accurate. A must-have for any recruiter. 
+                <div class="author">David L.</div>
+                <div class="role">Talent Lead, GrowthEdge</div>
+            </div>
+            <div class="testimonial">
+                Our hiring team uses it every week - the AI scoring is spot-on, especially for technical roles.
+                <div class="author">Priya K.</div>
+                <div class="role">Co-founder, DataCrux</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cta-section">
+    <div class="cta-inner">
+        <h2>Ready to Find the Best Candidate Faster?</h2>
+        <p>Upload your resumes now and let AI do the heavy lifting.</p>
+        <a href="{{ url_for('upload') }}" class="cta-button">Start Screening</a>
+    </div>
+</div>
+
+{% endblock %}
+
+
+

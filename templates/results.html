@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="results-section">
+  <div class="results-container">
+    <h1>Candidate Ranking Results</h1>
+    <p class="subtext">Resumes ranked based on similarity to the job description.</p>
+
+    {% if results %}
+    <div class="ranked-list">
+      {% for filename, score in results [:5] %}
+      {% set width = (score * 100)|int %}
+      <div class="resume-card">
+        <div class="resume-header">
+          <strong>{{ filename }}</strong>
+          {% if loop.first %}
+          <span class="badge">Top Match</span>
+          {% endif %}
+          <span class="score-label">{{ "%.2f"|format(score) }}</span>
+        </div>
+        <div class="score-bar">
+          <div class="score-fill" style="width: {{ width }}%;"></div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% if results %}
+    <div class="download-wrapper">
+        <a href="{{ url_for('download_results') }}" class="download-btn">⬇️ Download Results</a>
+    </div>
+    {% endif %}
+    {% else %}
+    <div class="no-results">
+      <p>No resumes ranked yet. <a href="{{ url_for('upload') }}">Upload resumes</a> to get started.</p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+<section class="faqs-section">
+    <div class="faqs-container">
+      <h2 class="faqs-title">📚 Frequently Asked Questions</h2>
+  
+      <div class="faq-item">
+        <h3><span class="faq-icon">🧠</span> How is the resume score calculated?</h3>
+        <p>The system analyzes keyword relevance between each resume and the job description using NLP and cosine similarity. A higher score means a better match.</p>
+      </div>
+  
+      <div class="faq-item">
+        <h3><span class="faq-icon">📄</span> What file types are supported?</h3>
+        <p>Currently, only PDF resumes are supported. Ensure files are not password-protected or image scans.</p>
+      </div>
+  
+      <div class="faq-item">
+        <h3><span class="faq-icon">🔐</span> Is my data stored?</h3>
+        <p>No. Your uploaded resumes and job description are processed temporarily in-memory and not stored on any server.</p>
+      </div>
+  
+      <div class="faq-item">
+        <h3><span class="faq-icon">📤</span> Can I re-upload new resumes?</h3>
+        <p>Yes, you can re-analyze new resumes anytime from the <a href="{{ url_for('upload') }}">Upload Page</a>.</p>
+      </div>
+    </div>
+  </section>    
+{% endblock %}
+
+

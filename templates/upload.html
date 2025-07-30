@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="job-description-field">
+    <label for="job_description" class="section-label">
+      <strong>Enter Job Description</strong>
+      <span class="helper-text">This will be used to rank resumes based on relevance.</span>
+    </label>
+    <textarea
+      name="job_description"
+      id="job_description"
+      rows="7"
+      required
+      placeholder="Paste the job description here... e.g. 'We are seeking a data analyst with experience in Python, SQL, and Tableau.'"
+    ></textarea>
+  </div>    
+
+<section class="upload-section">
+  <div class="upload-container">
+    <h1>Upload Resumes</h1>
+    <p>Supported format: PDF (.pdf). You can upload multiple resumes at once.</p>
+
+    <form method="POST" action="{{ url_for('upload') }}" enctype="multipart/form-data" class="upload-form" onsubmit="showUploadingMessage()">
+      <label for="resumes" class="file-input-label">
+        <div class="file-drop-area">
+          <span class="file-icon">📄</span>
+          <p>Click to browse or drag & drop files here</p>
+        </div>
+        <input type="file" name="resumes" id="resumes" multiple required onchange="updateFileList()">
+
+        <!-- Show selected file list here -->
+        <div id="file-list" class="file-list"></div>
+      </label>
+
+      <button type="submit" class="upload-btn">Upload & Analyze</button>
+    </form>
+
+    <p id="uploading-message" style="display: none; margin-top: 1.5rem; color: #007BFF;">
+        Uploading... please wait.
+    </p>
+  </div>
+  <script>
+    function showUploadingMessage() {
+      document.querySelector('.upload-form').style.display = 'none';
+      document.getElementById('uploading-message').style.display = 'block';
+    }
+
+    function updateFileList() {
+      const input = document.getElementById('resumes');
+      const output = document.getElementById('file-list');
+      const files = input.files;
+
+      if (files.length === 0) {
+        output.innerHTML = "<p>No files selected.</p>";
+        return;
+      }
+
+      let html = `<strong>${files.length} file${files.length > 1 ? 's' : ''} selected:</strong><ul>`;
+      for (let i = 0; i < files.length; i++) {
+        html += `<li>${files[i].name}</li>`;
+      }
+      html += "</ul>";
+      output.innerHTML = html;
+    }
+  </script>
+</section>
+<section class="how-it-works-section">
+    <div class="how-it-works-container">
+      <h2>🚀 How It Works</h2>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="step-icon">📤</div>
+          <h3>Upload Resumes</h3>
+          <p>Select one or more PDF resumes and provide a job description.</p>
+        </div>
+        <div class="how-step">
+          <div class="step-icon">🧠</div>
+          <h3>AI Analysis</h3>
+          <p>We scan and extract keywords, then use AI to compare resumes to your job description.</p>
+        </div>
+        <div class="how-step">
+          <div class="step-icon">📊</div>
+          <h3>View Results</h3>
+          <p>Get a ranked list of resumes based on match scores — instantly.</p>
+        </div>
+      </div>
+    </div>
+</section>  
+{% endblock %}
+
+
+      
+

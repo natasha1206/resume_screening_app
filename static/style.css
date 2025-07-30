@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 1.5rem;
+}
+.nav {
+    background-color: #007BFF;
+    padding: 1rem;
+    text-align: center;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+}
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: stretch;
+    margin: auto;
+    padding: 2rem;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #f5faff, #e8f0ff);
+    padding: 5rem 1.5rem;
+  }
+  
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .hero-text {
+    max-width: 600px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 2rem;
+    max-width: 500px;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+  
+    .hero-text {
+      flex: 1;
+      margin-bottom: 0;
+    }
+  
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end; /* Push image to the right */
+      padding-left: 2rem;
+    }
+  
+    .hero-image img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 30% 50% / 50% 50%;
+    } 
+
+  .hero-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .hero-button:hover {
+    background-color: #0056b3;
+  }
+}
+
+.features {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.feature-box {
+    flex: 1;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature-box h3 {
+    color: #007bff;
+}
+
+.testimonials {
+    margin-top: 5rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-top: 1px solid #eee;
+    border-bottom:1px solid #eee;
+}
+
+.testimonials-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+  
+.testimonials-container h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.testimonial-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.testimonial { 
+    flex: 1 1 280px;
+    max-width: 320px;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.03);
+    font-style: italic;
+    position: relative;
+}
+
+.testimonial::before {
+    content: "“";
+    font-size: 3rem;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    color: #007bff;
+}
+
+.testimonial .author {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.testimonial .role {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.cta-section {
+    max-width: stretch;
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #007BFF;
+    color: white;
+    margin-top: 0;
+    border-top: 1px solid #0056b3;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: white;
+    color: #007bff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #e0e0e0;
+}
+
+.cta-inner {
+    max-width: stretch;
+    margin: auto;
+    padding: 2rem 4rem;
+}
+
+.footer {
+    background-color: #343a40;
+    color: #ddd;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+    margin-top: 0;
+}
+
+.footer a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 10px
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.footer-container {
+    max-width: 960px;
+    margin: auto;
+}
+
+.footer-links {
+    margin-top: 0.5rem;
+}
+
+.job-description-field {
+    margin-bottom: 2rem;
+    margin-left: 50px;
+  }
+  
+  .section-label {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .helper-text {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.25rem;
+  }
+  
+  #job_description {
+    width: 50%;
+    padding: 1.25rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+    background-color: #fdfdfd;
+    transition: border-color 0.3s ease;
+  }
+  
+  #job_description:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+  }  
+  
+.upload-section {
+    padding: 4rem 1rem;
+    background-color: #f5f7fa;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .upload-container {
+    background: #fff;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .upload-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+  
+  .upload-container p {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .file-input-label {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .file-drop-area {
+    border: 2px dashed #007BFF;
+    padding: 2rem;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  .file-drop-area:hover {
+    background-color: #e9f3ff;
+  }
+  
+  .file-icon {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  .upload-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .upload-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .file-list {
+    margin-top: 1rem;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #333;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+  }  
+
+  .results-section {
+    padding: 3rem 1.5rem;
+    background-color: #f7f9fc;
+  }
+  
+  .results-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .results-container h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+  }
+  
+  .subtext {
+    color: #777;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+  
+  .ranked-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .resume-card {
+    background-color: #f4f6fa;
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  }
+  
+  .resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6rem;
+  }
+  
+  .score-label {
+    font-weight: 600;
+    color: #007bff;
+  }
+  
+  .score-bar {
+    background-color: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .score-fill {
+    background-color: #007bff;
+    height: 100%;
+    transition: width 0.5s ease;
+  }
+  
+  .no-results {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+    color: #444;
+  }
+  
+  .no-results a {
+    color: #007bff;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  .download-btn {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #28a745;
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+
+  .download-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }  
+  
+  .download-btn:hover {
+    background-color: #218838;
+  }
+  
+  .badge {
+    background-color: #ffc107;
+    color: #000;
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 12px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  .faqs-section {
+    background-color: #f8fafc;
+    padding: 3rem 1.5rem;
+    border-radius: 16px;
+    margin-top: 3rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .faqs-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faqs-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+  
+  .faq-item {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .faq-item h3 {
+    font-size: 1.125rem;
+    color: #111827;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .faq-icon {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+  }
+  
+  .faq-item p {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+
+  .how-it-works-section {
+    background-color: #f1f5f9;
+    padding: 3rem 1.5rem;
+    border-radius: 16px;
+    height: 50vh;
+  }
+  
+  .how-it-works-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .how-it-works-container h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+  
+  .how-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .how-step {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    max-width: 300px;
+    flex: 1;
+  }
+  
+  .step-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .how-step h3 {
+    font-size: 1.25rem;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+  
+  .how-step p {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.5;
+  }
+  
+  .about-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .about-hero {
+    background: rgb(249, 250, 251);
+    color: #3b82f6;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+  
+  .tagline {
+    font-size: 1.25rem;
+    margin-top: 0.75rem;
+    opacity: 0.9;
+  }
+  
+  .about-mission {
+    background-color: #f9fafb;
+  }
+  
+  .about-features {
+    background-color: #fff;
+  }
+  
+  .feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .feature-card {
+    background: #f3f4f6;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-cta {
+    background-color: #f0f4ff;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .center-text {
+    text-align: center;
+  }
+   

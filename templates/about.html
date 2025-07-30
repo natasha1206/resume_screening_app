@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="about-hero">
+  <div class="about-container">
+    <h1>About Our Resume Screener</h1>
+    <p class="tagline">Empowering recruiters and job seekers with intelligent, fair, and fast resume analysis.</p>
+  </div>
+</section>
+
+<section class="about-mission">
+  <div class="about-container">
+    <h2>🚀 Our Mission</h2>
+    <p>We aim to revolutionize hiring by using AI to screen resumes more effectively and equitably. With keyword extraction and contextual matching, our tool ensures you never miss the right candidate.</p>
+  </div>
+</section>
+
+<section class="about-features">
+  <div class="about-container">
+    <h2>🔍 What Makes Us Different</h2>
+    <div class="feature-cards">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Fast Analysis</h3>
+        <p>Instantly processes and ranks resumes based on job description relevance.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧠</div>
+        <h3>AI-Powered Matching</h3>
+        <p>Uses NLP and cosine similarity to deliver data-backed candidate scoring.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Privacy First</h3>
+        <p>Your documents never leave the server. No third-party storage or analysis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-cta">
+  <div class="about-container center-text">
+    <h2>Ready to Hire Smarter?</h2>
+    <p>Start screening resumes with AI in seconds. Save time and find the best matches faster.</p>
+    <a href="{{ url_for('upload') }}" class="cta-button">Try It Now</a>
+  </div>
+</section>
+
+{% endblock %}
+
